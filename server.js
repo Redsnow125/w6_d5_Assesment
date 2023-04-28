@@ -24,13 +24,13 @@ const playerRecord = {
   losses: 0,
 };
 
-// app.get('/', (req,res) =>{
-//   res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
-// })
+app.get('/', (req,res) =>{
+  res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
+})
 // Add up the total health of all the robots
 const calculateTotalHealth = (robots) =>
   robots.reduce((total, { health }) => total + health, 0);
-  rollbar.log(`calaculated ${health}`)
+  rollbar.log(`calaculated health`)
 
 // Add up the total damage of all the attacks of all the robots
 const calculateTotalAttack = (robots) =>
